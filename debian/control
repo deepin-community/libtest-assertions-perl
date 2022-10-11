@@ -1,0 +1,30 @@
+Source: libtest-assertions-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: perl,
+                     libtest-pod-perl,
+                     libtest-pod-coverage-perl,
+                     liblog-trace-perl
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libtest-assertions-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libtest-assertions-perl.git
+Homepage: https://metacpan.org/release/Test-Assertions
+
+Package: libtest-assertions-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         liblog-trace-perl
+Description: simple set of building blocks for unit and runtime testing
+ Test::Assertions provides a convenient set of tools for constructing tests,
+ such as unit tests or run-time assertion checks (like C's ASSERT macro).
+ Unlike some of the Test:: modules available on CPAN, Test::Assertions is
+ not limited to unit test scripts; for example it can be used to check if
+ output is as expected within a benchmarking script.
+ When it is used for unit tests, it generates output in the standard form
+ for CPAN unit testing (under Test::Harness).
+
